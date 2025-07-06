@@ -1,0 +1,127 @@
+.root-editor-container {
+  background-color: blue;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  &.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: blue;
+  }
+
+  .editor-header {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    button, select {
+      border: none;
+      background-color: #313131;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    select:focus {
+      outline: none;
+    }
+
+    button {
+      color: #00b8a2;
+      background-color: #2a3d3a;
+      cursor: pointer;
+      transition-duration: 0.5s;
+    }
+
+    button:hover {
+      background-color: #2a635a;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+  }
+
+  .editor-footer {
+    background-color: #1a1a1a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      padding: 4px 10px;
+      background-color: #3e3e3e;
+      color: #c3c4c8;
+      border: none;
+      border-radius: 4px;
+      gap: 10px;
+      cursor: pointer;
+      transition-duration: 0.8s;
+    }
+
+    .btn:hover {
+      background-color: #8d8e94;
+      color: white;
+    }
+  }
+
+  .editor-body {
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .editor-left-container, .editor-right-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .monaco-editor {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace !important;
+    height: 100%;  /* Ensure the editor fills the available height */
+    width: 100%;   /* Ensure the editor fills the available width */
+  }
+
+  
+
+  .output-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    color: white;
+    font-family: 'Courier New', monospace;
+    flex-shrink: 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+
+    h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .output-box {
+      background-color: #2c2c2c;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Performance Testing Report</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f2f1; /* soft teal background */
+      padding: 20px;
+      color: #204d4d;
+    }
+
+    h2 {
+      color: #0b3d3a; /* dark teal */
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 30px 0 10px;
+      color: #12706a; /* medium teal */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      box-shadow: 0 3px 8px rgba(18, 112, 106, 0.2);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 20px;
+      text-align: left;
+      border-bottom: 1px solid #b2d8d4;
+    }
+
+    th {
+      background-color: #0b3d3a;
+      color: #e0f2f1;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tr:hover {
+      background-color: #d0e8e6;
+    }
+
+    ul {
+      margin: 8px 0;
+      padding-left: 20px;
+      color: #204d4d;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CampusCode Nexus – Performance Testing Report</h2>
+
+  <div class="section-title">Benchmarking Results</div>
+  <table>
+    <tr>
+      <th>Metric</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>Average API Response Time</td>
+      <td>~230ms under normal load (50 users)</td>
+    </tr>
+    <tr>
+      <td>Max Concurrent Users Supported</td>
+      <td>300 active users in collaboration modules without performance degradation</td>
+    </tr>
+    <tr>
+      <td>Memory Usage</td>
+      <td>Stabilized around 150MB during peak usage with optimized garbage collection</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Load Testing Tools Used</div>
+  <table>
+    <tr>
+      <th>Tool</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>Apache JMeter</td>
+      <td>Simulated 500 users with a ramp-up period of 30 seconds to test system load limits</td>
+    </tr>
+    <tr>
+      <td>Locust</td>
+      <td>Tested real-time collaboration features like code syncing via WebSocket</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Performance Observations</div>
+  <table>
+    <tr>
+      <th>Issue</th>
+      <th>Resolution</th>
+    </tr>
+    <tr>
+      <td>Real-time chat service bottlenecks</td>
+      <td>Resolved by compressing socket payloads and introducing Redis for message queueing</td>
+    </tr>
+  </table>
+
+</body>
+</html>

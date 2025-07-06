@@ -1,0 +1,109 @@
+/* General layout of the diagram */
+.diagram-container {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Actor styling */
+.actor {
+    display: inline-block;
+    margin: 50px 100px;
+    position: relative;
+}
+
+.actor-label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.actor-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+}
+
+/* Use case styling */
+.use-case {
+    margin: 50px;
+    display: inline-block;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.use-case-label {
+    font-weight: bold;
+}
+
+/* Lines connecting actors and use cases */
+.line {
+    position: absolute;
+    background-color: #000;
+    width: 2px;
+    height: 50px;
+}
+
+.student-line {
+    top: 130px;
+    left: 100px;
+    height: 150px;
+}
+
+.teacher-line {
+    top: 130px;
+    left: 300px;
+    height: 150px;
+}
+
+.developer-line {
+    top: 130px;
+    left: 500px;
+    height: 150px;
+}
+
+/* Connection Lines between Actors and Use Cases */
+.connection {
+    position: absolute;
+    background-color: #000;
+    width: 2px;
+}
+
+#student-create-project {
+    top: 190px;
+    left: 100px;
+    height: 50px;
+}
+
+#teacher-create-project {
+    top: 190px;
+    left: 300px;
+    height: 50px;
+}
+
+#developer-write-code {
+    top: 190px;
+    left: 500px;
+    height: 50px;
+}
+
+#student-collaborate {
+    top: 290px;
+    left: 100px;
+    height: 50px;
+}
+
+#teacher-view-feedback {
+    top: 290px;
+    left: 300px;
+    height: 50px;
+}
